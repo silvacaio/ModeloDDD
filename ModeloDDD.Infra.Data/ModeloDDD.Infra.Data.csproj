@@ -50,7 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\ModeloDDDContext.cs" />
+    <Compile Include="EntityConfig\ProdutoConfiguration.cs" />
+    <Compile Include="EntityConfig\ClienteConfiguration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ClienteRepository.cs" />
+    <Compile Include="Repositories\ProdutoRepository.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ModeloDDD.Domain\ModeloDDD.Domain.csproj">
@@ -58,10 +64,7 @@
       <Name>ModeloDDD.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EntityConfig\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
