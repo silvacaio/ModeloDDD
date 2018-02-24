@@ -81,7 +81,7 @@ namespace ModeloDDD.MVC.Controllers
                 if (ModelState.IsValid)
                 {
                     var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(cliente);
-                    _clienteAppService.Add(clienteDomain);
+                    _clienteAppService.Update(clienteDomain);
                     return RedirectToAction("Index");
                 }
 

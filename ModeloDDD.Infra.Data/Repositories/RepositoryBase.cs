@@ -22,11 +22,15 @@ namespace ModeloDDD.Infra.Data.Repositories
 
         public void Remove(TEntity obj) => _context.Set<TEntity>().Remove(obj);
 
-        public void Update(TEntity obj) => _context.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+        public void Update(TEntity obj)
+        {
+            _context.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+            _context.SaveChanges();
+        }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _context.Dispose();
         }
     }
 }
