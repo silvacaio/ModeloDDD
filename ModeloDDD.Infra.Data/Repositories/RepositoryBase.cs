@@ -1,4 +1,4 @@
-﻿using ModeloDDD.Domain.Interfaces;
+﻿using ModeloDDD.Domain.Interfaces.Repositories;
 using ModeloDDD.Infra.Data.Context;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,11 @@ namespace ModeloDDD.Infra.Data.Repositories
     {
         protected readonly ModeloDDDContext _context = new ModeloDDDContext();
 
-        public void Add(TEntity obj) => _context.Set<TEntity>().Add(obj);
+        public void Add(TEntity obj)
+        {
+            _context.Set<TEntity>().Add(obj);
+            _context.SaveChanges();
+        }
 
         public IEnumerable<TEntity> GetAll() => _context.Set<TEntity>().ToList();
 

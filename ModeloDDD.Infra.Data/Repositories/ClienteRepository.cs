@@ -1,5 +1,5 @@
 ﻿using ModeloDDD.Domain.Entities;
-using ModeloDDD.Domain.Interfaces;
+using ModeloDDD.Domain.Interfaces.Repositories;
 
 namespace ModeloDDD.Infra.Data.Repositories
 {

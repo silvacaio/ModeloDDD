@@ -1,8 +1,7 @@
 ﻿using ModeloDDD.Domain.Entities;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace ModeloDDD.Domain.Interfaces
+namespace ModeloDDD.Domain.Interfaces.Repositories
 {
     public interface IProdutoRepository : IRepositoryBase<Produto>
     {

@@ -40,7 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProdutoAppService.cs" />
+    <Compile Include="ClienteAppService.cs" />
+    <Compile Include="AppServiceBase.cs" />
+    <Compile Include="Interfaces\IAppServiceBase.cs" />
+    <Compile Include="Interfaces\IProdutoAppService.cs" />
+    <Compile Include="Interfaces\IClienteAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModeloDDD.Domain\ModeloDDD.Domain.csproj">
+      <Project>{22E8C114-910F-445B-8914-FF2D946E1165}</Project>
+      <Name>ModeloDDD.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
